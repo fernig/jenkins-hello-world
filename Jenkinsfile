@@ -3,14 +3,14 @@ pipeline {
   stages {
     stage('Echo Version') {
       steps {
-        sh '''echo "Show version"
-mvn version'''
+        sh 'echo "Show version"'
+        sh 'mvn -version'
       }
     }
 
     stage('Build') {
       steps {
-        sh 'mvn clean package -DskipTest=true'
+        sh 'mvn clean package -DskipTests=true'
       }
     }
 
