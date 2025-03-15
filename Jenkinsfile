@@ -28,4 +28,7 @@ pipeline {
     }
 
   }
+  tools {
+    maven 'M399'
+  }
 }
